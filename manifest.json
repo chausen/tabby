@@ -1,0 +1,24 @@
+{
+    "name": "Tabby",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "clipboardWrite"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["clipboard.js"]            
+        }
+    ],
+    "commands": {
+        "log-all-urls": {
+        "suggested_key": "Ctrl+Shift+Y",
+        "description": "Log the urls of all open tabs"
+        }
+    }
+}
