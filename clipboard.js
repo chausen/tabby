@@ -15,4 +15,5 @@ async function copyToClipboard(text) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+    HUD.showForDuration("Copied urls", 2000);
 }

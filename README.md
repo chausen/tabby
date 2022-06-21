@@ -1,0 +1,2 @@
+# Tabby
+Using this to add some simple tab management features I would like to have in Chrome. Currently, that is just adding a command to copy all the URL of each open tab to the clipboard (Ctrl + Shift + Y). Using [Vimium](https://vimium.github.io/) as a reference.

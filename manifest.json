@@ -12,13 +12,26 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["clipboard.js"]            
+            "js": [
+                "lib/utils.js",
+                "lib/dom-utils.js",                
+                "clipboard.js",
+                "content-scripts/ui-component.js",
+                "content-scripts/hud.js"            
+            ],
+            "css": [
+                "content-scripts/tabby.css"
+            ]
         }
     ],
     "commands": {
         "log-all-urls": {
         "suggested_key": "Ctrl+Shift+Y",
-        "description": "Log the urls of all open tabs"
+        "description": "Write the urls of all open tabs to the clipboard"
         }
-    }
+    },
+    "web_accessible_resources": [{
+        "resources": ["pages/hud.html"],
+        "matches": ["<all_urls>"]
+    }]
 }
